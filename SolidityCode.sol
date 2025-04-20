@@ -265,6 +265,7 @@ contract ExpenseTracker {
         "User not registered"
     );
     return people[msg.sender].name;
+    }
 
     //Change2 - To update the name of the User
     function updateName(string memory _newName) public {
@@ -272,3 +273,4 @@ contract ExpenseTracker {
         people[msg.sender].name = _newName;
         emit NameUpdated(msg.sender, _newName);
     }
+}
